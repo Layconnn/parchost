@@ -1,8 +1,54 @@
 import React from 'react'
 import '../styles/pages/home2.scss';
 import Input from '../input/input';
+import { useState } from 'react';
+import Modal2 from '../modals/modal2';
 
 function Home2() {
+
+
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [isEmailValid, setIsEmailValid] = useState(true);
+    const [isNameValid, setIsNameValid] = useState(true);
+    const [openModal, setOpenModal] = useState(false);
+
+
+    const handleEmailChange = (e) =>{
+        setEmail(e.target.value)
+    }
+
+    const handleNameChange = (e) =>{
+        setName(e.target.value)
+    }
+
+
+    const validateEmail = (email) => {
+        return email.includes('@');
+      };
+    
+      const validateName = (name) => {
+        return name.length >= 6;
+      };
+
+     const handleSubmit = (e) =>{
+        e.preventDefault();
+
+        const isEmailValid = validateEmail(email);
+        const isNameValid = validateName(name);
+
+        setIsEmailValid(isEmailValid);
+        setIsNameValid(isNameValid);
+
+        if (isEmailValid && isNameValid) {
+            setOpenModal(true);
+          }
+     }
+
+     const close = () => {
+        setOpenModal(false)
+     }
+
   return (
     <>
         <div className="contact-nav">
@@ -42,17 +88,22 @@ function Home2() {
         <div className="section6">
             <p>Let’s get started</p>
             <h6>We would send you a brochure.</h6>
-            <div className="section6__inputs">
-                <div className="section6__inputs__one">
-                    <input type="text" placeholder='Company Name' />
-                    <Input />
+            <form  onSubmit={handleSubmit}>
+                <div className="section6__inputs">
+                    <div className="section6__inputs__one">
+                        <input type="text" placeholder='Company Name' onChange={handleNameChange} value={name} />
+                        {!isNameValid && alert(`Name must be at least 6 characters long.`)}
+                        <Input />
+                    </div>
+                    <div className="section6__inputs__two">
+                        <input type="text" placeholder='Company Email'  onChange={handleEmailChange} value={email} />
+                        {!isEmailValid && alert(`Please enter a valid email address.`)}
+                        <Input />
+                        <button type='submit' className="section6__inputs__two__btn">Sign me Up!</button>
+                        {openModal && <Modal2 close={close} />}
+                    </div>
                 </div>
-                <div className="section6__inputs__two">
-                    <input type="text" placeholder='Company Name' />
-                    <Input />
-                    <div className="section6__inputs__two__btn">Sign me Up!</div>
-                </div>
-            </div>
+            </form>
         </div>
          <div className="footer">
             <img src="./image/bluey.svg" alt="" />

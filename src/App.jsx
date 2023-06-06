@@ -2,6 +2,7 @@ import React from "react";
 // import Home2 from "./pages/home2";
 // import Home from "./pages/home";
 import Router from "./router/router";
+// import FormReg from "./pages/formReg";
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       {/* <Home /> */}
       {/* <Home2 /> */}
       <Router />
+      {/* <FormReg /> */}
     </>
   )
 }
