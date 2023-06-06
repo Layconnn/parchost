@@ -9,6 +9,13 @@ function Home() {
     const next = () => {
         router('/registration#learn-more');
     };
+
+    const background = {
+        backgroundImage: 'url(./image/cup.svg)',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center'
+    }
   return (
     <>
         <div className="contact-nav">
@@ -18,7 +25,7 @@ function Home() {
             </div>
         </div> 
         <div className="joy">
-            <div className="joy__other">
+            <div className="joy__other" style={background}>
                 <h5 className='joy__other__name'><img src="./image/ph.svg" alt="" />PARCHOST</h5>
                 <div className='joy__other__cap'>
                     <p className='joy__other__cap__one'>Automate pickup of documents, parcels and more to customers safely and securely.</p>

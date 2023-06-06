@@ -49,6 +49,10 @@ function Home2() {
         setOpenModal(false)
      }
 
+     const background = {
+        backgroundImage: 'url(./image/mask.svg)'
+    }
+
   return (
     <>
         <div className="contact-nav">
@@ -58,7 +62,7 @@ function Home2() {
             </div>
         </div> 
         <div className="content">
-            <div className="content__other">
+            <div className="content__other" style={background}>
                 <h5 className='content__other__name'><img src="./image/ph.svg" alt="" />PARCHOST</h5>
                 <div className='content__other__cap'>
                     <p className='content__other__cap__one'>Automate pickup of documents, parcels, Cheque books, ATM cards and more.</p>
