@@ -1,0 +1,19 @@
+input{
+    padding: 0.75rem 0 0.625rem 2rem;
+    background: #FFFFFF;
+    border: 0.125rem solid #000000;
+    border-radius: 0.625rem;
+    max-width: 28.063rem;
+    width: 100%;
+    font-style: italic;
+    font-family: 'Public Sans';
+    font-weight: 400;
+    font-size: 0.875rem;
+    outline: none;
+    line-height: 1rem;
+    color: #D1D1D1;
+    @media (max-width: 500px){
+        max-width: 18.063rem;
+        font-size: 0.575rem;
+    }
+}
