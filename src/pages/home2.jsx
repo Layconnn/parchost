@@ -101,12 +101,11 @@ function Home2() {
                     <div className="section6__inputs">
                         <div className="section6__inputs__one">
                             <input type="text" placeholder='Company Name' onChange={handleNameChange} value={name} />
-                            {!isNameValid && alert(`Name must be at least 6 characters long.`)}
                             <Input />
                         </div>
                         <div className="section6__inputs__two">
                             <input type="text" placeholder='Company Email'  onChange={handleEmailChange} value={email} />
-                            {!isEmailValid && alert(`Please enter a valid email address.`)}
+                            {!isEmailValid && alert(`Please enter a valid information.`)}
                             <Input />
                             <button type='submit' className="section6__inputs__two__btn">Sign me Up!</button>
                             {openModal && <Modal2 close={close} />}

@@ -74,7 +74,6 @@ function FormReg() {
                                         <input type="text" value={name} placeholder='Company Name' className="section9__nirvana__gap__content__inputs__one__rice"
                                         onChange={handleNameChange}
                                         />
-                                        {!isNameValid && alert(`Name must be at least 6 characters long.`)}
                                         <input type="text" value={name} placeholder='Company Name' className="section9__nirvana__gap__content__inputs__one__beans" 
                                         onChange={handleNameChange}
                                         />
@@ -84,7 +83,7 @@ function FormReg() {
                                         <input type="text" value={email} placeholder='Company Email' className="section9__nirvana__gap__content__inputs__two__beans"
                                         onChange={handleEmailChange}
                                         />        
-                                        {!isEmailValid && alert(`Please enter a valid email address.`)}
+                                        {!isEmailValid && !isNameValid && alert(`Please enter a valid information.`)}
                                         <button
                                         type="submit" className="section9__nirvana__gap__content__inputs__two__btn">Sign me up!</button>
                                         {openModal && <Modal1 close={close} />}
