@@ -4,7 +4,7 @@
     padding-bottom: 1.424rem;
     &__container{
         display: flex;
-        align-items: center;
+        justify-content: center;
         margin-left: 47.813rem;
         @media (max-width: 1240px){
             margin-left: 35.813rem;
@@ -58,25 +58,34 @@
     }
 }
 .joy{
-    color: white;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     &__other{
-        width: 100%;
-        background: rgba(0, 0, 0, 0.5);
         padding-bottom: 12.625rem;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        &__main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 82.375rem;
+        }
         @media (max-width: 500px){
             padding-bottom: 5.625rem;
         }
         &__name{
             display: flex;
+            justify-content: center;
             font-weight: 600;
+            color: white;
             font-size: 1.5rem;
             line-height: 2.375rem;
             letter-spacing: 0.71em;
             font-family: 'Saira';
-            padding: 3.875rem 0 6.875rem 35.375rem;
+            padding: 3.875rem 0 6.875rem 0;
             @media (max-width: 1400px){
                 padding-left: 0;
                 padding-right: 0;
@@ -98,7 +107,7 @@
             }
         }
         &__cap{
-            padding: 0 0 0 50.875rem;
+            padding-left: 45.5rem;
             @media (max-width: 1400px){
                 padding-left: 30.875rem;
             }
@@ -114,6 +123,7 @@
                 font-size: 3rem;
                 line-height: 4.75rem;
                 max-width: 35.125rem;
+                color: white;
                 letter-spacing: -0.02em;
                 padding-bottom: 4.5rem;
                 @media (max-width: 1310px){
@@ -161,14 +171,19 @@
         padding-top: 4.125rem;
         padding-bottom: 3.563rem;
     }
+    &__main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 53.563rem;
+        margin: 0 auto;
+    }
     &__cap{
         font-weight: 500;
         font-size: 2.25rem;
         line-height: 3.563rem;
         text-align: justify;
         letter-spacing: -0.02em;
-        padding-left: 20.625rem;
-        padding-right: 15.813rem;
         padding-bottom: 6.563rem;
         color: #FA7921;
         @media (max-width: 1400px){
@@ -195,8 +210,6 @@
         }
     }
     &__content{
-        padding-left: 20.813rem;
-        padding-right: 20.688rem;
         color: white;
         display: flex;
         padding-bottom: 2.75rem;
@@ -345,8 +358,6 @@
         }
     }
     &__content1{
-        padding-left: 20.813rem;
-        padding-right: 20.688rem;
         color: white;
         display: flex;
         align-items: center;
@@ -501,9 +512,15 @@
         padding-top: 2.875rem;
         padding-bottom: 3.625rem;
     }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 58.188rem;
+        margin: 0 auto;
+    }
     &__content{
         padding-bottom: 3.438rem;
-        padding-left: 15.813rem;
         @media (max-width: 1024px){
             display: flex;
             flex-direction: column;
@@ -541,7 +558,6 @@
         &__box{
             display: flex;
             padding-bottom: 5.563rem;
-            padding-right: 8rem;
             @media (max-width: 1200px){
                 flex-wrap: wrap;
             }
@@ -657,8 +673,8 @@
     }
     &__input{
         padding: 0.813rem 0.875rem 0.813rem 0;
-        margin-left: 24.875rem;
         height: 4.813rem;
+        margin-left: 9.063rem;
         background: #FFFFFF;
         border-radius: 2rem;
         max-width: 40.875rem;
@@ -680,9 +696,6 @@
             padding-top: 0.513rem;
             height: 2.813rem;
             max-width: 15.875rem;
-        }
-        @media (max-width: 375px){
-            width: unset;
         }
         img{
             @media (max-width: 768px){

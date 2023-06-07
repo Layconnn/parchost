@@ -58,15 +58,21 @@
     }
 }
 .section9{
-    background-color: #FA7921;
+    background: #FA7921;
     &__nirvana{
-        background-image: url(./image/frame.svg);
+        width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
-        padding-left: 6.952rem;
+        background-position: center center;
         padding-top: 3.438rem;
         padding-bottom: 7.688rem;
-        background-position: center center;
+        &__items{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 75.736rem;
+        }
         @media (max-width: 1200px){
             padding-left: 3.952rem;
         }
@@ -111,7 +117,7 @@
             flex-direction: column;
             align-items: end;
             text-align: right;
-            padding-right: 7.188rem;
+            padding-right: 3.188rem;
             @media (max-width: 1024px){
                 text-align: unset;
                 align-items: unset;

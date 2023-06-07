@@ -63,23 +63,29 @@
     text-align: right;
     &__other{
         width: 100%;
-        background-image: url(./image/mask.svg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         padding-bottom: 12.625rem;
-        display: inline-block;
+        &__main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 77.375rem;
+        }
         @media (max-width: 500px){
             padding-bottom: 5.625rem;
         }
         &__name{
             display: flex;
+            justify-content: center;
             font-weight: 600;
             font-size: 1.5rem;
             line-height: 2.375rem;
             letter-spacing: 0.71em;
             font-family: 'Saira';
-            padding: 3.875rem 0 6.875rem 35.375rem;
+            padding: 3.875rem 0 6.875rem 0;
             @media (max-width: 1400px){
                 padding-left: 0;
                 padding-right: 0;
@@ -105,7 +111,6 @@
             }
         }
         &__cap{
-            padding: 0 9.25rem 0 0;
             display: flex;
             flex-direction: column;
             align-items: end;
@@ -133,7 +138,7 @@
                     max-width: 20rem;
                 }
                 @media (max-width: 425px){
-                    max-width: 15rem;
+                    max-width: 12rem;
                     line-height: 1.75rem;
                     font-size: 1rem;
                     padding-bottom: 2.5rem;
@@ -156,7 +161,7 @@
                     font-size: 0.8rem;
                 }
                 @media (max-width: 425px){
-                    max-width: 12.688rem;
+                    max-width: 10.688rem;
                     height: 1.888rem;
                 }
             }
@@ -164,7 +169,7 @@
     }
 }
 .section1{
-    padding: 5.625rem 12.875rem 13.438rem 15.5rem;
+    padding: 5.625rem 0 13.438rem 0;
     background: #E5E5E5;
     @media (max-width: 1400px){
         padding-left: 12.5rem;
@@ -188,6 +193,13 @@
         padding-bottom: 3.438rem;
     }
     &__content{
+        &__main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 61.25rem;
+        }
         @media (max-width: 1024px){
             display: flex;
             flex-direction: column;
@@ -366,9 +378,20 @@
     }
 }
 .section6{
-    padding: 4.125rem 0 5.625rem 16.563rem;
+    padding: 4.125rem 0 5.625rem 0;
     background: #FA7921;
     color: white;
+    &__cap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 64.063rem;
+        padding-left: 3rem;
+        @media (max-width: 1024px){
+            padding-left: unset;
+        }
+    }
     @media (max-width: 1200px){
         display: flex;
         flex-direction: column;
@@ -380,7 +403,7 @@
         padding-left: 2rem;
         padding-right: 2rem;
         padding-bottom: 4rem;
-    padding-top: 2rem;
+        padding-top: 2rem;
     }
     p{
         font-weight: 600;
@@ -411,6 +434,8 @@
         }
         &__one{
             margin-right: 1.688rem;
+            max-width: 28.063rem;
+            width: 100%;
             @media (max-width: 1024px){
                 margin-right: 0;
             }
@@ -436,6 +461,8 @@
             }
         }
         &__two{
+            max-width: 28.063rem;
+            width: 100%;
             input{
                 padding: 0.75rem 0 0.625rem 2rem;
                 background: #FFFFFF;
