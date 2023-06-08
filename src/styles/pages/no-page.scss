@@ -1,0 +1,25 @@
+.no-page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 20rem; */
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    h5{
+        font-size: 5rem;
+        color: chocolate;
+        @media (max-width: 768px){
+            font-size: 3rem;
+        }
+    }
+    p{
+        font-size: 3rem;
+        color: chocolate;
+        @media (max-width: 768px){
+            font-size: 1.5rem;
+        }
+    }
+}

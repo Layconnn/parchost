@@ -39,7 +39,9 @@ function FormReg() {
 
         if (isEmailValid && isNameValid) {
             setOpenModal(true);
-          }
+        } else {
+            alert(`Please enter a valid information!`)
+        }
      }
 
      const close = () => {
@@ -83,7 +85,6 @@ function FormReg() {
                                         <input type="text" value={email} placeholder='Company Email' className="section9__nirvana__gap__content__inputs__two__beans"
                                         onChange={handleEmailChange}
                                         />        
-                                        {!isEmailValid && !isNameValid && alert(`Please enter a valid information.`)}
                                         <button
                                         type="submit" className="section9__nirvana__gap__content__inputs__two__btn">Sign me up!</button>
                                         {openModal && <Modal1 close={close} />}

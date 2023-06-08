@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/pages/home2.scss';
 import Input from '../input/input';
 import { useState } from 'react';
 import Modal2 from '../modals/modal2';
+import { useNavigate } from 'react-router-dom';
 
 function Home2() {
 
+    const router = useNavigate();
 
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
@@ -42,7 +44,9 @@ function Home2() {
 
         if (isEmailValid && isNameValid) {
             setOpenModal(true);
-          }
+        } else {
+            alert(`Please enter a valid information!`)
+        }
      }
 
      const close = () => {
@@ -52,6 +56,7 @@ function Home2() {
      const background = {
         backgroundImage: 'url(./image/mask.svg)'
     }
+
 
   return (
     <>
@@ -67,7 +72,7 @@ function Home2() {
                     <h5 className='content__other__name'><img src="./image/ph.svg" alt="" />PARCHOST</h5>
                     <div className='content__other__cap'>
                         <p className='content__other__cap__one'>Automate pickup of documents, parcels, Cheque books, ATM cards and more.</p>
-                        <p className='content__other__cap__btn'>Get Started</p>
+                        <p className='content__other__cap__btn' onClick={() => router('/sign-up')}>Get Started</p>
                     </div>
                 </div>
             </div>
@@ -105,7 +110,6 @@ function Home2() {
                         </div>
                         <div className="section6__inputs__two">
                             <input type="text" placeholder='Company Email'  onChange={handleEmailChange} value={email} />
-                            {!isEmailValid && alert(`Please enter a valid information.`)}
                             <Input />
                             <button type='submit' className="section6__inputs__two__btn">Sign me Up!</button>
                             {openModal && <Modal2 close={close} />}
